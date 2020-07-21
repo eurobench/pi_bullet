@@ -1,6 +1,22 @@
 ## Purposes
 
-PI extraction codes within the BULLET testbed. Two agorithms have been implemented: pi_bullet_walking and pi_bullet_walkingComplete. The former extracts Peak_load_left, Peak_load_right, RMS_load_left, RMS_load_right, Stance_time_left, Stance_time_right PIs from subject_N_run_R_wrench_CrutchLeft.csv, subject_N_run_R_wrench_CrutchRight.csv, subject_N_run_R_gaitEvents.yaml. The latter extracs Peak_load_left, Peak_load_right, RMS_load_left, RMS_load_right, Stance_time_left, Stance_time_right, Peak_load_shoulders_left, Peak_load_shoulders_right, RMS_load_shoulders_left, RMS_load_shoulders_right from subject_N_run_R_wrench_CrutchLeft.csv, subject_N_run_R_wrench_CrutchRight.csv, subject_N_run_R_gaitEvents, subject_N_run_R_wrench_ShoulderLeft.csv, subject_N_run_R_wrench_ShoulderRight.csv.
+PI extraction codes within the BULLET testbed.
+Two agorithms have been implemented: pi_bullet_walking and pi_bullet_walkingComplete.
+
+The former extracts following PIs:
+- Peak_load_left
+- Peak_load_right
+- RMS_load_left
+- RMS_load_right
+- Stance_time_left
+- Stance_time_right
+
+using following files
+- subject_N_run_R_wrench_CrutchLeft.csv
+- subject_N_run_R_wrench_CrutchRight.csv
+- subject_N_run_R_gaitEvents.yaml.
+
+The latter extracs Peak_load_left, Peak_load_right, RMS_load_left, RMS_load_right, Stance_time_left, Stance_time_right, Peak_load_shoulders_left, Peak_load_shoulders_right, RMS_load_shoulders_left, RMS_load_shoulders_right from subject_N_run_R_wrench_CrutchLeft.csv, subject_N_run_R_wrench_CrutchRight.csv, subject_N_run_R_gaitEvents, subject_N_run_R_wrench_ShoulderLeft.csv, subject_N_run_R_wrench_ShoulderRight.csv.
 
 ## Installation
 
