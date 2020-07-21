@@ -1,22 +1,50 @@
 ## Purposes
 
-XXX
+PI extraction codes within the BULLET testbed. Two agorithms have been implemented: pi_bullet_walking and pi_bullet_walkingComplete. The former extracts Peak_load_left, Peak_load_right, RMS_load_left, RMS_load_right, Stance_time_left, Stance_time_right PIs from subject_N_run_R_wrench_CrutchLeft.csv, subject_N_run_R_wrench_CrutchRight.csv, subject_N_run_R_gaitEvents.yaml. The latter extracs Peak_load_left, Peak_load_right, RMS_load_left, RMS_load_right, Stance_time_left, Stance_time_right, Peak_load_shoulders_left, Peak_load_shoulders_right, RMS_load_shoulders_left, RMS_load_shoulders_right from subject_N_run_R_wrench_CrutchLeft.csv, subject_N_run_R_wrench_CrutchRight.csv, subject_N_run_R_gaitEvents, subject_N_run_R_wrench_ShoulderLeft.csv, subject_N_run_R_wrench_ShoulderRight.csv.
 
 ## Installation
 
-XXX
+To enable the code under octave, additional packages are needed.
+
+```console
+sudo apt-get install liboctave-dev
+```
+
+Follow [these recommendations](https://octave.org/doc/v4.2.1/Installing-and-Removing-Packages.html) to make the installation of the additional packages needed:
+
+- [control](https://octave.sourceforge.io/control/index.html)
+- [signal](https://octave.sourceforge.io/signal/index.html)
+- [io](https://octave.sourceforge.io/io/index.html)
+- [statistics](https://octave.sourceforge.io/statistics/index.html)
+
+Once octave is configured:
+
+```console
+pkg load control
+pkg load signal
+pkg load io
+pkg load statistics
+```
 
 ## Usage
 
-XXX
+pi_bullet_walking:
+```console
+./run_pi_BulletWalking subject_N_run_R_wrench_CrutchLeft.csv subject_N_run_R_wrench_CrutchRight.csv subject_N_run_R_gaitEvents.yaml outputDir
+```
+
+pi_bullet_walkingComplete:
+```console
+./run_pi_BulletWalkingComplete subject_N_run_R_wrench_CrutchLeft.csv subject_N_run_R_wrench_CrutchRight.csv subject_N_run_R_gaitEvents.yaml subject_N_run_R_wrench_ShoulderLeft.csv subject_N_run_R_wrench_ShoulderRight.csv outputDir
+```
 
 ## Build docker image
 
-XXX
+To be completed
 
 ## Launch the docker image
 
-XXX
+to be completed
 
 ## Acknowledgements
 
