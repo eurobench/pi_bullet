@@ -1,3 +1,9 @@
+# PI BULLET
+
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
+Copyright BULLET 2020
+
 ## Purposes
 
 PI extraction codes within the BULLET testbed.
@@ -44,12 +50,12 @@ pkg load statistics
 
 ## Usage
 
-pi_bullet_walking:
+* pi_bullet_walking:
 ```console
 ./run_pi_BulletWalking subject_N_run_R_wrench_CrutchLeft.csv subject_N_run_R_wrench_CrutchRight.csv subject_N_run_R_gaitEvents.yaml outputDir
 ```
 
-pi_bullet_walkingComplete:
+* pi_bullet_walkingComplete:
 ```console
 ./run_pi_BulletWalkingComplete subject_N_run_R_wrench_CrutchLeft.csv subject_N_run_R_wrench_CrutchRight.csv subject_N_run_R_gaitEvents.yaml subject_N_run_R_wrench_ShoulderLeft.csv subject_N_run_R_wrench_ShoulderRight.csv outputDir
 ```
