@@ -7,22 +7,47 @@ Copyright BULLET 2020
 ## Purposes
 
 PI extraction codes within the BULLET testbed.
-Two agorithms have been implemented: pi_bullet_walking and pi_bullet_walkingComplete.
+Two algorithms have been implemented: `pi_bullet_walking` and `pi_bullet_walkingComplete`.
 
-The former extracts following PIs:
-- Peak_load_left
-- Peak_load_right
-- RMS_load_left
-- RMS_load_right
-- Stance_time_left
-- Stance_time_right
+### `pi_bullet_walking`
 
-using following files
-- subject_N_run_R_wrench_CrutchLeft.csv
-- subject_N_run_R_wrench_CrutchRight.csv
-- subject_N_run_R_gaitEvents.yaml.
+`pi_bullet_walking` extracts following PIs:
 
-The latter extracs Peak_load_left, Peak_load_right, RMS_load_left, RMS_load_right, Stance_time_left, Stance_time_right, Peak_load_shoulders_left, Peak_load_shoulders_right, RMS_load_shoulders_left, RMS_load_shoulders_right from subject_N_run_R_wrench_CrutchLeft.csv, subject_N_run_R_wrench_CrutchRight.csv, subject_N_run_R_gaitEvents, subject_N_run_R_wrench_ShoulderLeft.csv, subject_N_run_R_wrench_ShoulderRight.csv.
+- `Peak_load_left`
+- `Peak_load_right`
+- `RMS_load_left`
+- `RMS_load_right`
+- `Stance_time_left`
+- `Stance_time_right`
+
+using following files:
+
+- `wrench_CrutchLeft.csv`
+- `wrench_CrutchRight.csv`
+- `gaitEvents.yaml`.
+
+### `pi_bullet_walkingComplete`
+
+`pi_bullet_walkingComplete` extracts the following PIs:
+
+- `Peak_load_left`,
+- `Peak_load_right`,
+- `RMS_load_left`,
+- `RMS_load_right`,
+- `Stance_time_left`,
+- `Stance_time_right`,
+- `Peak_load_shoulders_left`,
+- `Peak_load_shoulders_right`,
+- `RMS_load_shoulders_left`,
+- `RMS_load_shoulders_right`,
+
+from the pre-processed data files:
+
+- `subject_N_run_R_wrench_CrutchLeft.csv`,
+- `subject_N_run_R_wrench_CrutchRight.csv`,
+- `subject_N_run_R_gaitEvents`,
+- `subject_N_run_R_wrench_ShoulderLeft.csv,` 
+- `subject_N_run_R_wrench_ShoulderRight.csv`.
 
 ## Installation
 
@@ -50,12 +75,16 @@ pkg load statistics
 
 ## Usage
 
-* pi_bullet_walking:
+## `pi_bullet_walking`
+
+Assuming folder `output` exists:
+
 ```console
-./run_pi_BulletWalking subject_N_run_R_wrench_CrutchLeft.csv subject_N_run_R_wrench_CrutchRight.csv subject_N_run_R_gaitEvents.yaml outputDir
+pi_bullet_walking/run_pi_BulletWalking pi_bullet_walking/tests/Exp01_Walking/input/subject_01_run_01_wrench_CrutchLeft.csv pi_bullet_walking/tests/Exp01_Walking/input/subject_01_run_01_wrench_CrutchRight.csv pi_bullet_walking/tests/Exp01_Walking/input/subject_01_run_01_gaitEvents.yaml output
 ```
 
-* pi_bullet_walkingComplete:
+## `pi_bullet_walkingComplete`
+
 ```console
 ./run_pi_BulletWalkingComplete subject_N_run_R_wrench_CrutchLeft.csv subject_N_run_R_wrench_CrutchRight.csv subject_N_run_R_gaitEvents.yaml subject_N_run_R_wrench_ShoulderLeft.csv subject_N_run_R_wrench_ShoulderRight.csv outputDir
 ```
