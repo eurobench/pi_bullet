@@ -69,41 +69,41 @@ function result = computePiBulletWalkingComplete(csv_left_crutch_file, csv_right
     display("Store results")
 
     [filepath, name, ext] = fileparts(csv_left_crutch_file);
-    filename = strcat(result_dir, "/", "peak_load_left", ".yaml")
+    filename = strcat(result_dir, "/", "peak_load_left", ".yaml");
     store_vector(filename, leftPeakResults);
     
     [filepath, name, ext] = fileparts(csv_right_crutch_file);
-    filename = strcat(result_dir, "/", "peak_load_right", ".yaml")
+    filename = strcat(result_dir, "/", "peak_load_right", ".yaml");
     store_vector(filename, rightPeakResults);
     
     [filepath, name, ext] = fileparts(csv_left_crutch_file);
-    filename = strcat(result_dir, "/", "rms_load_left", ".yaml")
+    filename = strcat(result_dir, "/", "rms_load_left", ".yaml");
     store_scalar(filename, leftRmsLoad);
     
     [filepath, name, ext] = fileparts(csv_right_crutch_file);
-    filename = strcat(result_dir, "/", "rms_load_right", ".yaml")
+    filename = strcat(result_dir, "/", "rms_load_right", ".yaml");
     store_scalar(filename, rightRmsLoad);
     
     [filepath, name, ext] = fileparts(gait_phase_file);
-    filename = strcat(result_dir, "/", "stance_time_left", ".yaml")
+    filename = strcat(result_dir, "/", "stance_time_left", ".yaml");
     store_vector(filename, leftStanceTimeResults);
-    filename = strcat(result_dir, "/", "stance_time_right", ".yaml")
+    filename = strcat(result_dir, "/", "stance_time_right", ".yaml");
     store_vector(filename, rightStanceTimeResults);
     
     [filepath, name, ext] = fileparts(csv_left_shoulder_file);
-    filename = strcat(result_dir, "/", "peak_load_shoulder_left", ".yaml")
+    filename = strcat(result_dir, "/", "peak_load_shoulder_left", ".yaml");
     store_vector(filename, leftShoulderPeakResults);
     
     [filepath, name, ext] = fileparts(csv_right_shoulder_file);
-    filename = strcat(result_dir, "/", "peak_load_shoulder_right", ".yaml")
+    filename = strcat(result_dir, "/", "peak_load_shoulder_right", ".yaml");
     store_vector(filename, rightShoulderPeakResults);
     
     [filepath, name, ext] = fileparts(csv_left_shoulder_file);
-    filename = strcat(result_dir, "/", "rms_load_shoulder_left", ".yaml")
+    filename = strcat(result_dir, "/", "rms_load_shoulder_left", ".yaml");
     store_vector(filename, leftShoulderRmsResults);
     
     [filepath, name, ext] = fileparts(csv_right_shoulder_file);
-    filename = strcat(result_dir, "/", "rms_load_shoulder_right", ".yaml")
+    filename = strcat(result_dir, "/", "rms_load_shoulder_right", ".yaml");
     store_vector(filename, rightShoulderRmsResults);
     
     result = true;
