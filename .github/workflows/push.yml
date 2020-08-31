@@ -33,7 +33,7 @@ jobs:
       run: docker build . --file Dockerfile --tag eurobenchtest/$REPO_NAME:latest
     - name: Get the docker image testing material
       run:  wget -O test_docker_call.py https://raw.githubusercontent.com/eurobench/docker_test/master/test_docker_call.py
-      - name: test the Docker image
+    - name: test the Docker image
       env:
         TEST_PLAN: tests/test_plan.xml
         DOCKER_IMAGE: eurobenchtest/${{ github.event.repository.name }}:latest
