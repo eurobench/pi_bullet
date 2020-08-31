@@ -80,13 +80,15 @@ pkg load statistics
 Assuming folder `output` exists:
 
 ```console
-./run_pi_BulletWalking tests/Exp01_Walking/input/subject_01_run_01_wrench_CrutchLeft.csv tests/Exp01_Walking/input/subject_01_run_01_wrench_CrutchRight.csv tests/Exp01_Walking/input/subject_01_run_01_gaitEvents.yaml tests/Exp01_Walking/output
+./run_pi_BulletWalking tests/walking/input/wrench_CrutchLeft.csv tests/walking/input/wrench_CrutchRight.csv tests/walking/input/gaitEvents.yaml output
 ```
 
 ## `pi_bullet_walkingComplete`
 
+Assuming folder `output` exists:
+
 ```console
-./run_pi_BulletWalkingComplete tests/Exp01_WalkingComplete/input/subject_01_run_01_wrench_CrutchLeft.csv tests/Exp01_WalkingComplete/input/subject_01_run_01_wrench_CrutchRight.csv tests/Exp01_WalkingComplete/input/subject_01_run_01_gaitEvents.yaml tests/Exp01_WalkingComplete/input/subject_01_run_01_wrench_ShoulderLeft.csv tests/Exp01_WalkingComplete/input/subject_01_run_01_wrench_ShoulderRight.csv tests/Exp01_WalkingComplete/output
+./run_pi_BulletWalkingComplete tests/walking_complete/input/wrench_CrutchLeft.csv tests/walking_complete/input/wrench_CrutchRight.csv tests/walking_complete/input/gaitEvents.yaml tests/walking_complete/input/wrench_ShoulderLeft.csv tests/walking_complete/input/wrench_ShoulderRight.csv output
 ```
 
 ## Build docker image
