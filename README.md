@@ -46,7 +46,7 @@ from the pre-processed data files:
 - `subject_N_run_R_wrench_CrutchLeft.csv`,
 - `subject_N_run_R_wrench_CrutchRight.csv`,
 - `subject_N_run_R_gaitEvents`,
-- `subject_N_run_R_wrench_ShoulderLeft.csv,` 
+- `subject_N_run_R_wrench_ShoulderLeft.csv,`
 - `subject_N_run_R_wrench_ShoulderRight.csv`.
 
 ## Installation

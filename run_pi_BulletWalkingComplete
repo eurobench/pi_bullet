@@ -2,8 +2,8 @@
 
 printf ("current directory: %s\n", pwd())
 addpath("src")
-addpath("sharedFunctions")
-addpath("basicFunctions")
+addpath("src/sharedFunctions")
+addpath("src/basicFunctions")
 arg_list = argv ();
 
 isOctave = exist('OCTAVE_VERSION', 'builtin') ~= 0;
