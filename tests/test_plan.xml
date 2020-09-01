@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<test_plan>
+<test pi_name="./run_pi_BulletWalking"
+      parameters="/in/wrench_CrutchLeft.csv /in/wrench_CrutchRight.csv /in/gaitEvents.yaml /out"
+      input_folder="walking/input"
+      output_folder="walking/output"/>
+<test pi_name="./run_pi_BulletWalkingComplete"
+      parameters="/in/wrench_CrutchLeft.csv /in/wrench_CrutchRight.csv /in/gaitEvents.yaml /in/wrench_ShoulderLeft.csv /in/wrench_ShoulderRight.csv /out"
+      input_folder="walking_complete/input"
+      output_folder="walking_complete/output"/>
+</test_plan>
