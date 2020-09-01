@@ -43,11 +43,11 @@ using following files:
 
 from the pre-processed data files:
 
-- `subject_N_run_R_wrench_CrutchLeft.csv`,
-- `subject_N_run_R_wrench_CrutchRight.csv`,
-- `subject_N_run_R_gaitEvents`,
-- `subject_N_run_R_wrench_ShoulderLeft.csv,`
-- `subject_N_run_R_wrench_ShoulderRight.csv`.
+- `wrench_CrutchLeft.csv`,
+- `wrench_CrutchRight.csv`,
+- `gaitEvents`,
+- `wrench_ShoulderLeft.csv,`
+- `wrench_ShoulderRight.csv`.
 
 ## Installation
 
@@ -63,6 +63,9 @@ Follow [these recommendations](https://octave.org/doc/v4.2.1/Installing-and-Remo
 - [signal](https://octave.sourceforge.io/signal/index.html)
 - [io](https://octave.sourceforge.io/io/index.html)
 - [statistics](https://octave.sourceforge.io/statistics/index.html)
+- [matgeom](https://octave.sourceforge.io/matgeom/index.html)
+- [geometry](https://octave.sourceforge.io/geometry/index.html)
+- [mapping](https://octave.sourceforge.io/mapping/index.html)
 
 Once octave is configured:
 
@@ -71,6 +74,9 @@ pkg load control
 pkg load signal
 pkg load io
 pkg load statistics
+pkg load matgeom
+pkg load geometry
+pkg load mapping
 ```
 
 ## Usage
@@ -93,11 +99,30 @@ Assuming folder `output` exists:
 
 ## Build docker image
 
-To be completed
+_(only tested under linux)_
+
+Run the following command in order to create the docker image for this PI:
+
+```console
+docker build . -t pi_bullet
+```
 
 ## Launch the docker image
 
-To be completed
+Assuming the `tests/walking/input` contains the input data, and that the directory `out_tests/` is **already created**, and will contain the PI output:
+
+```shell
+docker run --rm -v $PWD/tests/walking/input:/in -v $PWD/out_tests:/out pi_bullet ./run_pi_BulletWalking
+/in/wrench_CrutchLeft.csv /in/wrench_CrutchRight.csv /in/gaitEvents.yaml /out
+```
+
+Similar command can be launched for the algorithm `walkingcomplete`:
+
+```shell
+
+docker run --rm -v $PWD/tests/walking_complete/input:/in -v $PWD/out_tests:/out pi_bullet ./run_pi_BulletWalkingComplete /in/wrench_CrutchLeft.csv /in/wrench_CrutchRight.csv /in/gaitEvents.yaml /in/wrench_ShoulderLeft.csv /in/wrench_ShoulderRight.csv /out
+
+```
 
 ## Acknowledgements
 
