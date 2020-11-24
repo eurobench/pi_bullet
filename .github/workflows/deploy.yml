@@ -16,6 +16,6 @@ jobs:
       uses: docker/build-push-action@v1
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
-        passowrd: ${{ secrets.DOCKER_PASSWORD }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
         repository: eurobenchtest/pi_bullet
         tag_with_ref: true
